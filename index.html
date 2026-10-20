@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gift Ready?</title>   
+<style>
+  body { 
+   
+    display:flex; justify-content:center; align-items:center; 
+    height:100vh; background:#ffe6f0; font-family: sans-serif; 
+    flex-direction:column;
+  }
+  h1 { color:#ff3366; }
+  .buttons { margin-top:20px; position:relative; width:300px; height:100px; }
+  button { 
+    padding:12px 30px; font-size:18px; border:none; 
+    border-radius:10px; cursor:pointer; position:absolute;
+  }
+  #yes { background:#ff3366; color:white; left:20px; }
+  #no { background:#ccc; left:180px; }
+    
+</style>
+</head>
+<body>
+
+<h1>Are you ready for the gift? 🎁</h1>
+
+<div class="buttons">
+  <button id="yes" onclick="window.location.href='page2.html'">Yes 😍</button>
+  <button id="no" onmouseover="moveNo()" onclick="moveNo()">No 🙄</button>
+</div>
+
+<p style="margin-top:30px; font-size:14px;">Only Yes Mattum thaan Click Pannalaam!</p>
+
+<script>
+function moveNo() {
+  const noBtn = document.getElementById('no');
+  const x = Math.random() * 200;
+  const y = Math.random() * 200 - 50;
+  noBtn.style.left = x + 'px';
+  noBtn.style.top = y + 'px';
+}
+</script>
+
+</body>
+</html>
